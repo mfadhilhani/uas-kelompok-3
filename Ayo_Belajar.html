@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="vieport" content="width=device-width, initial-scale=1.0">
+	<title>Ayo Belajar</title>
+	<link rel="stylesheet" href="dist/output.css">
+	<link rel="stylesheet" href="CSS/swiper-bundle.min.css">
+	<script>
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
+				'(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.classList.add('dark')
+		} else {
+			document.documentElement.classList.remove('dark')
+		}
+	</script>
+</head>
+
+<body class="dark:bg-slate-800">
+
+	<!-- Nabar Start -->
+	<header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+		<div class="container">
+			<div class="flex items-center justify-between relative">
+				<div class="px-4">
+					<a href="#home" class="font-bold text-lg text-primary block py-6">Kelompok 3</a>
+				</div>
+				<!-- kanan -->
+				<div class="flex items-center px-4">
+					<button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+						<span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+						<span class="hamburger-line transition duration-300 ease-in-out"></span>
+						<span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+					</button>
+
+					<nav id="nav-menu"
+						class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent">
+
+
+						<ul class="block lg:flex">
+							<li class="group">
+								<a href="#home"
+									class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Home</a>
+							</li>
+							<li class="group">
+								<a href="index.html"
+									class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Profil
+								</a>
+							</li>
+							<li class="group">
+								<a href="#portfolio"
+									class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Berita
+									Terkini</a>
+							</li>
+							<li class="group">
+								<a href="Ayo_Belajar.html"
+									class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Ayo
+									Belajar</a>
+							</li>
+							<li class="group">
+								<a href="#contact"
+									class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Lokasi</a>
+							</li>
+							<li class="group mt-3 lg:mt-0">
+								<!-- Tambahkan mt-3 di sini -->
+
+							</li>
+
+							<li class="flex items-center pl-8 mt-3 lg:mt-0">
+								<div class="flex">
+									<span class="mr-2 text-slate-500 text-sm">light</span>
+									<input type="checkbox" class="hidden" id="dark-toggle">
+									<label for="dark-toggle">
+										<div
+											class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+											<div
+												class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
+											</div>
+										</div>
+									</label>
+									<span class="ml-2 text-slate-500 text-sm">dark</span>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Navbar End -->
+
+
+	<div class="flex justify-center text-center mb-5 judul pt-20 ">
+		<div class="text-3xl lg:text-5xl mt-10 ">
+			<h2 class="dark:text-white">PEMROGRAMAN</h2>
+		</div>
+	</div>
+	<main>
+		<div class="slide-container Swiper rounded-lg">
+			<div class="slide-content">
+				<div class="card-wrapper swiper-wrapper">
+					<div class="card swiper-slide">
+						<div class="image-content">
+							<span class="overlay"></span>
+
+							<div class="card-image">
+								<img src="img/html.png" class="card-img">
+							</div>
+						</div>
+
+						<div class="card-content">
+							<h2 class="name">Html</h2>
+							<p class="description">Mari belajar Perogram.</p>
+
+							<button class="button" onclick="window.open('file/Html.pdf')">View More</button>
+						</div>
+					</div>
+					<div class="card swiper-slide">
+						<div class="image-content">
+							<span class="overlay"></span>
+
+							<div class="card-image">
+								<img src="img/css.png" class="card-img">
+							</div>
+						</div>
+
+						<div class="card-content">
+							<h2 class="name">Css</h2>
+							<p class="description">Mari belajar Perogram.</p>
+
+							<button class="button" onclick="window.open('file/Css.pdf')">View More</button>
+						</div>
+					</div>
+					<div class="card swiper-slide">
+						<div class="image-content">
+							<span class="overlay"></span>
+
+							<div class="card-image">
+								<img src="img/Js.png" class="card-img">
+							</div>
+						</div>
+
+						<div class="card-content">
+							<h2 class="name">JavaScript</h2>
+							<p class="description">Mari belajar Perogram.</p>
+
+							<button class="button" onclick="window.open('file/JavaScript.pdf')">View More</button>
+						</div>
+					</div>
+					<div class="card swiper-slide">
+						<div class="image-content">
+							<span class="overlay"></span>
+
+							<div class="card-image">
+								<img src="img/php.png" class="card-img">
+							</div>
+						</div>
+
+						<div class="card-content">
+							<h2 class="name">Php</h2>
+							<p class="description">Mari belajar Perogram.</p>
+
+							<button class="button" onclick="window.open('file/Php.pdf')">View More</button>
+						</div>
+					</div>
+					<div class="card swiper-slide">
+						<div class="image-content">
+							<span class="overlay"></span>
+
+							<div class="card-image">
+								<img src="img/mysql.png" class="card-img">
+							</div>
+						</div>
+
+						<div class="card-content">
+							<h2 class="name">MySQL</h2>
+							<p class="description">Mari belajar Perogram.</p>
+
+							<button class="button" onclick="window.open('file/Mysql.pdf')">View More</button>
+						</div>
+					</div>
+					<div class="card swiper-slide">
+						<div class="image-content">
+							<span class="overlay"></span>
+
+							<div class="card-image">
+								<img src="img/python.png" class="card-img">
+							</div>
+						</div>
+
+						<div class="card-content">
+							<h2 class="name">Python</h2>
+							<p class="description">Mari belajar Perogram.</p>
+
+							<button class="button" onclick="window.open('file/Python.pdf')">View More</button>
+						</div>
+					</div>
+					<div class="card swiper-slide">
+						<div class="image-content">
+							<span class="overlay"></span>
+
+							<div class="card-image">
+								<img src="img/cpp.png" class="card-img">
+							</div>
+						</div>
+
+						<div class="card-content">
+							<h2 class="name">C++</h2>
+							<p class="description">Mari belajar Perogram.</p>
+
+							<button class="button" onclick="window.open('file/cpp.pdf')">View More</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</main>
+
+</body>
+
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/script1.js"></script>
+
+</html>

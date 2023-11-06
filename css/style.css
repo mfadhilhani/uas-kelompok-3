@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+000000 = black background
+CF0A0A = red background
+#DC5F00 = oren background
+EEEEEE  = white background
+
+*/
+body {
+  font-family: "Inter", sans-serif;
+}
+/* Profil */
+
+#profil h2 {
+  font-weight: bold;
+}
+
+.foto-box {
+  position: relative;
+  background-color: #cf0a0a;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.foto-box::before {
+  content: "KELAS";
+  position: absolute;
+  color: #eeeeee;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  opacity: 0;
+  transition: 0.5s;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.foto-box:hover::before {
+  opacity: 0.2;
+}
+.foto-box::after {
+  content: "PTIK E";
+  position: absolute;
+  color: #eeeeee;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.foto-box:hover::after {
+  opacity: 0.2;
+}
+
+.nama-kelompok {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 1.5em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.foto-box:hover .nama-kelompok {
+  top: 20px;
+  opacity: 1;
+}
+
+.ptik-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+  font-size: 25px;
+  color: #000000;
+}
+
+.foto-box:hover .ptik-button {
+  bottom: 20px;
+  opacity: 1;
+  color: #dc5f00;
+}
+
+.foto-kelas {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate3d(-50%, 20%, 80px);
+  max-width: 500px;
+}
+
+.foto-box:hover .foto-kelas {
+  transform: translate3d(-50%, 20%, 80px) scale(1.5);
+}
+
+.kutipan {
+  position: absolute;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 1;
+  transition: 0.5s;
+  color: #000000;
+  text-align: center;
+}
+
+.foto-box:hover .kutipan {
+  opacity: 0;
+}
+
+/* Navbar */
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white bg-opacity-70 backdrop-blur-sm dark:bg-dark dark:bg-opacity-70;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45 transition;
+}
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
+}
+
+/* Bagian Ayo belajar */
+.judul h2 {
+  font-weight: bold;
+}
+
+.icon {
+  width: 200px;
+  float: left;
+  height: 70px;
+  padding-top: 13px;
+}
+.logo {
+  color: #dc5f00;
+  font-size: 30px;
+  font-family: Arial;
+  padding-left: 20px;
+  float: left;
+  padding-top: 10px;
+  font-weight: 600;
+}
+.menu {
+  display: flex;
+  float: right;
+  padding-top: 30px;
+}
+.menu ul {
+  display: flex;
+  list-style: none;
+}
+.menu ul li a {
+  text-decoration: none;
+  font-family: Arial;
+  color: #eeeeee;
+  margin-right: 25px;
+  font-weight: 600;
+}
+.menu ul li a:hover {
+  color: #dc5f00;
+}
+main {
+  transform: translateY(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-container {
+  max-width: 1120px;
+  width: 100%;
+  background-color: #ccc7c7;
+  padding: 10px;
+}
+.slide-content {
+  overflow: hidden;
+  margin: 0 40px;
+}
+.card {
+  border-radius: 25px;
+  background-color: #f1f1f1;
+}
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px;
+}
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #cf0a0a;
+  border-radius: 25px 25px 25px 25px;
+}
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #f1f1f1;
+}
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #cf0a0a;
+}
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description {
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button {
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #cf0a0a;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background: #dc5f00;
+}
