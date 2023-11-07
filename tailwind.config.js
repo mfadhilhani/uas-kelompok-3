@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html", "Ayo_Belajar.html"],
+  content: ["index.html", "Ayo_Belajar.html", "Profil.html", "Berita_terkini.html"],
   darkMode: "class",
   theme: {
     container: {
